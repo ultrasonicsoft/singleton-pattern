@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var email_client_1 = require("./email-client");
+var printer_service_1 = require("./printer-service");
+var pdf_client_1 = require("./pdf-client");
+var emailClient = new email_client_1.EmailClient();
+emailClient.sendEmail('Mail 1');
+emailClient.sendEmail('Mail 2');
+emailClient.sendEmail('Mail 3');
+var printCount = printer_service_1.PrinterService.getPrintCount();
+console.log("Print copies: " + printCount);
+var pdfClient = new pdf_client_1.PdfClient();
+pdfClient.printPdf('Pdf 1');
+pdfClient.printPdf('Pdf 2');
+printCount = printer_service_1.PrinterService.getPrintCount();
+console.log("Print copies: " + printCount);
