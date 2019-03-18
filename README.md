@@ -1,5 +1,12 @@
 # Singleton Design pattern implemented in Typescript
 
+## Design
+
+* PrinterService - It is a Singleton class which provide service `print` to its client.
+* EmailClient - Prints email via PrinterService
+* PdfClient - Prints pdf content via PrinterService
+* main.ts - Main program which creates objects of Email and Pdf and prints.
+
 ## Running program
 
 `tsc *.ts && node main.js`
